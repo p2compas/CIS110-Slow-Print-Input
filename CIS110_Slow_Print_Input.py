@@ -10,21 +10,32 @@
 from time import sleep
 
 # Time to wait between characters
-delay = 0.075
+delay = 0.05
 
 def slowPrint(s):
-    string = s
-    for char in s:
+    for char in str(s):
         print(char, end="")
         sleep(delay)
     print()
 
 def slowInput(s):
-    string = s
-    for char in s:
+    for char in str(s):
         print(char, end="")
         sleep(delay)
     return input()
 
-catName = slowInput("What is the name of the best cat ever?  ")
-slowPrint(f"Hello world, {catName} is the best cat!")
+# print lists
+lst = ['one', 'two', 'three', 'four']
+slowPrint(lst)
+
+# print objects
+slowPrint(slowPrint)
+slowPrint(slowInput)
+
+# input
+name = slowInput("\nThis is a slow input prompt, What\'s your name?  ")
+
+num = slowInput(f"Hello, {name}! What\'s your favorite number?  ")
+
+# output
+slowPrint(f"Your name is {name} and your favorite number is {num}.")
