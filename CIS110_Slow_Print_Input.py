@@ -2,7 +2,7 @@ from time import sleep
 
 # Print one character at a time, with objects separated by sep
 # Each line ending with end, and delay seconds between characters.
-def slowPrint(*objects: object, sep: str | None = ' ', end: str | None = '\n', delay: float | int = 0.05):
+def slowPrint(*objects: object, sep: str | None = ' ', end: str | None = '\n', delay: float | int = 0.05) -> None:
     s, e, first = sep, end, True
     for obj in objects:
         print(f"{s if not first else ''}", end='')
@@ -14,7 +14,7 @@ def slowPrint(*objects: object, sep: str | None = ' ', end: str | None = '\n', d
 
 # Display prompt one character at a time with delay seconds between characters.
 # Return str from input()
-def slowInput(prompt: str | object = '', delay: float | int = 0.05):
+def slowInput(prompt: str | object = '', delay: float | int = 0.05) -> str:
     for char in str(prompt):
         print(char, end="")
         sleep(delay)
