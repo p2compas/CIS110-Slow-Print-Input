@@ -9,13 +9,22 @@
 # Import dependencies
 from time import sleep
 
+# Time to wait between characters
+delay = 0.075
+
 def slowPrint(s):
-    delay = 0.1
     string = s
     for char in s:
         print(char, end="")
         sleep(delay)
     print()
 
-catName = 'Garfield'
+def slowInput(s):
+    string = s
+    for char in s:
+        print(char, end="")
+        sleep(delay)
+    return input()
+
+catName = slowInput("What is the name of the best cat ever?  ")
 slowPrint(f"Hello world, {catName} is the best cat!")
