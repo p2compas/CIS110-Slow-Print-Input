@@ -20,16 +20,18 @@ def slowInput(prompt: str | object = '', delay: float | int = 0.05):
         sleep(delay)
     return input()
 
+# If ran as script, show examples
 if __name__ == '__main__':
-    # print lists example
+    # print lists
     lst = ['one', 'two', 'three', 'four']
     slowPrint(lst)
-    # print objects example
+    # print objects
     slowPrint(slowPrint)
     slowPrint(slowInput)
-    # slowInput example
+    # slowInput
     name = slowInput("\nThis is a slow input prompt, What\'s your name?  ")
     num = slowInput(f"Hello, {name}! What\'s your favorite number?  ")
-    # showPrint example
+    # slowPrint f-string
     slowPrint(f"Your name is {name} and your favorite number is {num}.")
-    slowPrint("Your name is", name, "and your favorite number is", num, end=1)
+    # slowPrint objects
+    slowPrint("Your name is", name, "and your favorite number is", num, end=".\n")
