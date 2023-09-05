@@ -27,7 +27,6 @@ if __name__ == '__main__':
     slowPrint(lst)
     # print objects
     slowPrint(slowPrint)
-    slowPrint(slowInput)
     # slowInput
     name = slowInput("\nThis is a slow input prompt, What\'s your name?  ")
     num = slowInput(f"Hello, {name}! What\'s your favorite number?  ")
