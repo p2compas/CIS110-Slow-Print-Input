@@ -67,7 +67,10 @@ def example() -> None:
     return
 
 if __name__ == '__main__':
-    usage = """Usage: %s [message] [delay]
+    usage = """If message is supplied, prints message with delay seconds pause between characters.
+    If message is empty, an example script is executed.
+    
+        Usage: %s [message] [delay]
         message: print message with a delay between characters
         delay: delay, in seconds, between printing each character of message"""%sys.argv[0]
     match len(sys.argv):
