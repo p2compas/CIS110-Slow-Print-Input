@@ -82,5 +82,5 @@ if __name__ == '__main__':
                 slowPrint(sys.argv[1], delay=d)
             except:
                 print('The delay parameter must be of type float or int.', usage, sep="\n\n")
-                sys.exit(2)
+                sys.exit(1)
         case _: print(usage)
